@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class ViveInput : MonoBehaviour
 {
-    /*
-    public SteamVR_TrackedObject mTrackedObject = null;
-    public SteamVR_Controller.Device mDevice;
+
+    //public SteamVR_TrackedObject mTrackedObject = null;
+    //public SteamVR_Controller.Device mDevice;
+    // a reference to the hand
+    //public SteamVR_Input_Sources handType;
 
     void Awake()
     {
-        mTrackedObject = GetComponent<SteamVR_TrackedObject>();
+        //mTrackedObject = GetComponent<SteamVR_TrackedObject>();
     }
 
     // Start is called before the first frame update
@@ -22,8 +24,8 @@ public class ViveInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mDevice = SteamVR_Controller.Input((int)mTrackedObject.index);
-
+        //mDevice = SteamVR_Controller.Input((int)mTrackedObject.index);
+        /*
         #region Trigger
 
         if (mDevice.getTouchDown(SteamVR_Controller.ButtonMask.Trigger))
@@ -67,11 +69,11 @@ public class ViveInput : MonoBehaviour
             print("Touchpad up");
         }
         Vector2 touchValue = mDevice.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
-
-        #endregion
+        */
+        //#endregion
     
     }
-    
+    /*
     public SteamVR_Action_Single 
     void Update()
     {

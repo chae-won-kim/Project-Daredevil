@@ -24,7 +24,7 @@ public class UDPReceive : MonoBehaviour
     public string lastReceivedUDPPacket = "";
     public string allReceivedUDPPackets = ""; // clean up this from time to time!
 
-    private static byte[] data = new byte[121];
+    private static byte[] data = new byte[600];
 
 
     // start from shell
@@ -33,7 +33,7 @@ public class UDPReceive : MonoBehaviour
         UDPReceive receiveObj = new UDPReceive();
         receiveObj.init();
 
-        for (int i = 0; i < 101; i++)
+        for (int i = 0; i < 515; i++)
         {
             data[i] = 0x01;
         }
@@ -55,14 +55,14 @@ public class UDPReceive : MonoBehaviour
     // OnGUI
     void OnGUI()
     {
-        Rect rectObj = new Rect(40, 10, 200, 400);
-        GUIStyle style = new GUIStyle();
-        style.alignment = TextAnchor.UpperLeft;
-        GUI.Box(rectObj, "# UDPReceive\n143.248.158.30 " + port + " #\n"
-                    + "shell> nc -u 143.248.158.30 : " + port + " \n"
-                    + "\nLast Packet: \n" + lastReceivedUDPPacket
-                    + "\n\nAll Messages: \n" + allReceivedUDPPackets
-                , style);
+        //Rect rectObj = new Rect(40, 10, 200, 400);
+        //GUIStyle style = new GUIStyle();
+        //style.alignment = TextAnchor.UpperLeft;
+        //GUI.Box(rectObj, "# UDPReceive\n143.248.158.30 " + port + " #\n"
+        //            + "shell> nc -u 143.248.158.30 : " + port + " \n"
+        //            + "\nLast Packet: \n" + lastReceivedUDPPacket
+        //            + "\n\nAll Messages: \n" + allReceivedUDPPackets
+        //        , style);
     }
 
   
@@ -128,7 +128,7 @@ public class UDPReceive : MonoBehaviour
                 string text2 = Encoding.ASCII.GetString(data, 0, data.Length);
                 int n = 0;
 
-                print(">> " + text);
+                //print(">> " + text);
 
                 /*
                 foreach (sbyte byteValue in data)
